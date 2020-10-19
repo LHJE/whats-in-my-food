@@ -11,5 +11,17 @@ RSpec.describe 'Foods Index' do
     it "can see the total number of items returned by the search" do
       expect(page).to have_content("Total number of items: 38680")
     end
+
+    it "can see info about each food after click" do
+      within "#food-600987" do
+        expect(page).to have_content("Description: SWEET POTATOES")
+        expect(page).to have_content("GTIN/UPC code:")
+        expect(page).to have_content("070560951975")
+        expect(page).to have_content("Brand Owner:")
+        expect(page).to have_content("The Pictsweet Company")
+        expect(page).to have_content("Ingredients:")
+        expect(page).to have_content("SWEET POTATOES.")
+      end
+    end
   end
 end
