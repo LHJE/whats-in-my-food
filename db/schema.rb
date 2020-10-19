@@ -17,7 +17,7 @@ ActiveRecord::Schema.define(version: 2020_10_19_160139) do
 
   create_table "food_infos", force: :cascade do |t|
     t.string "description"
-    t.integer "gtin_code"
+    t.string "gtin_code"
     t.string "owner"
     t.string "ingredients"
     t.datetime "created_at", null: false
