@@ -1,3 +1,26 @@
 <% if !@foods_info.nil? %>
-  <h1>  Total number of items: <%= @foods_info.total %><br></h1>
+  <h1> Total number of items: <%= @foods_info.total %><br></h1>
+  <% @foods_info.foods.each do |food| %>
+    <section class='food' id='food-<%= food[:fdcId] %>'>
+      <h2> Description: <%= food[:description] %> </h2>
+      <h3> GTIN/UPC code: </h3>
+      <% if food[:gtinUpc] == "" || food[:gtinUpc].nil? %>
+        <p> No GTIN/UPC Code Listed </p>
+      <% else %>
+        <p><%= food[:gtinUpc]%></p>
+      <% end %>
+      <h3> Brand Owner:</h3>
+      <% if food[:brandOwner] == "" || food[:brandOwner].nil? %>
+        <p> No Brand Owner Listed </p>
+      <% else %>
+        <p><%= food[:brandOwner]%></p>
+      <% end %>
+      <h3> Ingredients:</h3>
+      <% if food[:ingredients] == "" || food[:ingredients].nil? %>
+        <p> No Ingredients Listed </p>
+      <% else %>
+        <p><%= food[:ingredients] %></p>
+      <% end %>
+    </section>
+  <% end %>
 <% end %>
