@@ -1,9 +1,7 @@
 class Food
-  attr_reader :total,
-              :foods
+  attr_reader :total
 
   def initialize(attrs)
     @total = attrs[:totalHits]
-    @foods = attrs[:foods]
   end
 end
