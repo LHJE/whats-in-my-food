@@ -9,5 +9,11 @@ RSpec.describe 'Welcome Index' do
     it "can fill in sweet potatoes in the form" do
       fill_in :q, with: 'sweet potatoes'
     end
+
+    it "can click Search button" do
+      fill_in :q, with: 'sweet potatoes'
+
+      click_button "Search"
+    end
   end
 end
