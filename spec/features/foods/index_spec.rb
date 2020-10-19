@@ -8,5 +8,8 @@ RSpec.describe 'Foods Index' do
       click_button "Search"
     end
 
+    it "can see the total number of items returned by the search" do
+      expect(page).to have_content("Total number of items: 38680")
+    end
   end
 end
