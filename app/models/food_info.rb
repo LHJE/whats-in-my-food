@@ -1,5 +1,6 @@
-class FoodInfo < ApplicationRecord
+# frozen_string_literal: true
 
+class FoodInfo < ApplicationRecord
   validates :description,
             :gtin_code,
             :owner,

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class FoodDatabase
   def self.food_details(food)
     key = ENV['FOOD_DATA_API_KEY']

@@ -1,5 +1,7 @@
-Rails.application.routes.draw do
-  root "welcome#index"
+# frozen_string_literal: true
 
-  get :foods, to: "foods#index"
+Rails.application.routes.draw do
+  root 'welcome#index'
+
+  get :foods, to: 'foods#index'
 end
