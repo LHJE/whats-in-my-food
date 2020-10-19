@@ -13,7 +13,7 @@ RSpec.describe 'Foods Index' do
     end
 
     it "can see info about each food after click" do
-      within "#food-600987" do
+      within "#food-#{FoodInfo.first[:id]}" do
         expect(page).to have_content("Description: SWEET POTATOES")
         expect(page).to have_content("GTIN/UPC code:")
         expect(page).to have_content("070560951975")
