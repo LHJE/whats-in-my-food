@@ -16,13 +16,13 @@ RSpec.describe 'Foods Index' do
 
     it 'can see info about each food after click' do
       within "#food-#{FoodInfo.first[:id]}" do
-        expect(page).to have_content('Description: SWEET POTATOES')
+        expect(page).to have_content("Description: #{FoodInfo.first[:description]}")
         expect(page).to have_content('GTIN/UPC code:')
-        expect(page).to have_content('070560951975')
+        expect(page).to have_content(FoodInfo.first[:gtin_code])
         expect(page).to have_content('Brand Owner:')
-        expect(page).to have_content('The Pictsweet Company')
+        expect(page).to have_content(FoodInfo.first[:owner])
         expect(page).to have_content('Ingredients:')
-        expect(page).to have_content('SWEET POTATOES.')
+        expect(page).to have_content(FoodInfo.first[:ingredients])
       end
     end
   end
